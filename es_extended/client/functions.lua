@@ -5,6 +5,9 @@ end
 
 ---@return table
 function ESX.GetPlayerData()
+    if Config.CustomInventory == "qs" then
+        ESX.PlayerData.inventory = exports["qs-inventory"]:getUserInventory()
+    end
     return ESX.PlayerData
 end
 
